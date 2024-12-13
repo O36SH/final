@@ -1,0 +1,29 @@
+{
+  "short_name": "عطش",
+  "name": "عطش | تطبيق المحادثات",
+  "icons": [
+    {
+      "src": "thirst.svg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "thirst-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "thirst-512.png", 
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "dir": "rtl",
+  "lang": "ar"
+}

@@ -1,0 +1,73 @@
+/* Smooth transitions */
+.page-transition {
+  @apply transition-all duration-300;
+}
+
+/* Hover effects */
+.hover-scale {
+  @apply transition-transform hover:scale-[1.02];
+}
+
+/* Loading skeleton animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg,
+    var(--skeleton-start) 25%,
+    var(--skeleton-middle) 37%,
+    var(--skeleton-end) 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+.dark .skeleton {
+  --skeleton-start: theme(colors.gray.800);
+  --skeleton-middle: theme(colors.gray.700);
+  --skeleton-end: theme(colors.gray.800);
+}
+
+.light .skeleton {
+  --skeleton-start: theme(colors.gray.100);
+  --skeleton-middle: theme(colors.gray.50);
+  --skeleton-end: theme(colors.gray.100);
+}
+
+/* Glass morphism */
+.glass {
+  @apply backdrop-blur-md bg-white/80 dark:bg-gray-900/80;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r;
+}
+
+.gradient-blue {
+  @apply from-blue-500 to-blue-700 dark:from-blue-400 dark:to-blue-600;
+}
+
+/* Pulse animation */
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 0.5; }
+  100% { transform: scale(1.2); opacity: 0; }
+}
+
+.pulse-ring::before {
+  content: '';
+  @apply absolute inset-0 rounded-full;
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

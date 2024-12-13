@@ -1,0 +1,19 @@
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+@supports not (padding-top: env(safe-area-inset-top)) {
+  .safe-top {
+    padding-top: 0;
+  }
+}
+
+.header-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 640px) {
+  .header-compact {
+    height: 3rem;
+  }
+}
